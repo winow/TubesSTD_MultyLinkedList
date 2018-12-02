@@ -1,0 +1,139 @@
+# depslib dependency file v1.0
+1543738451 source:f:\tubes std\tubesstd\main.cpp
+	"semua_header.h"
+
+1543507320 source:f:\tubes std\tubesstd\sourcejalan.cpp
+	"headerjalan.h"
+
+1543506889 source:f:\tubes std\tubesstd\sourcekota.cpp
+	"headerkota.h"
+
+1543512687 source:f:\tubes std\tubesstd\sourcemenu.cpp
+	"headermenu.h"
+	"headerjalan.h"
+	"headerkota.h"
+	"headerrelasi.h"
+
+1543506889 source:f:\tubes std\tubesstd\sourcerelasi.cpp
+	"headerrelasi.h"
+
+1543510010 f:\tubes std\tubesstd\headerkota.h
+	<iostream>
+
+1543507001 f:\tubes std\tubesstd\headerjalan.h
+	<iostream>
+
+1543506353 f:\tubes std\tubesstd\headerrelasi.h
+	<iostream>
+	"headerkota.h"
+	"headerjalan.h"
+
+1543510567 f:\tubes std\tubesstd\headermenu.h
+	<conio.h>
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<stdlib.h>
+	"headerjalan.h"
+	"headerkota.h"
+	"headerrelasi.h"
+
+1543705481 source:f:\tubes std\tubesstd\kota.cpp
+	"semua_header.h"
+
+1543735741 f:\tubes std\tubesstd\semua_header.h
+	<conio.h>
+	<dos.h>
+	<istream>
+	<iostream>
+	<string>
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1543737137 source:f:\tubes std\tubesstd\relasi.cpp
+	"semua_header.h"
+
+1543698376 source:f:\tubes std\tubesstd\jalan.cpp
+	"semua_header.h"
+
+1543739318 source:f:\tubes std\tubesstd\menu.cpp
+	"semua_header.h"
+
+1543514341 source:f:\tubes std\tubesstd\welcome.cpp
+	"semua_header.h"
+
+1543708151 source:f:\tubes std\tubesstd\penampung.cpp
+	"semua_header.h"
+
+1543737887 source:f:\tubes std\tubesstd\lain-lain.cpp
+	"semua_header.h"
+
+1543760579 source:f:\tubesstd\jalan.cpp
+	"semua_header.h"
+
+1543762294 f:\tubesstd\semua_header.h
+	<conio.h>
+	<dos.h>
+	<istream>
+	<iostream>
+	<string>
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1543758127 source:f:\tubesstd\kota.cpp
+	"semua_header.h"
+
+1543758113 source:f:\tubesstd\lain-lain.cpp
+	"semua_header.h"
+
+1543761208 source:f:\tubesstd\main.cpp
+	"semua_header.h"
+
+1543762294 source:f:\tubesstd\menu.cpp
+	"semua_header.h"
+
+1543761390 source:f:\tubesstd\penampung.cpp
+	"semua_header.h"
+
+1543758114 source:f:\tubesstd\relasi.cpp
+	"semua_header.h"
+
+1543514342 source:f:\tubesstd\welcome.cpp
+	"semua_header.h"
+
+1543760579 source:f:\tubesstd_struktur_tak_terdata\jalan.cpp
+	"semua_header.h"
+
+1543766655 f:\tubesstd_struktur_tak_terdata\semua_header.h
+	<conio.h>
+	<dos.h>
+	<istream>
+	<iostream>
+	<string>
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1543758127 source:f:\tubesstd_struktur_tak_terdata\kota.cpp
+	"semua_header.h"
+
+1543758113 source:f:\tubesstd_struktur_tak_terdata\lain-lain.cpp
+	"semua_header.h"
+
+1543762304 source:f:\tubesstd_struktur_tak_terdata\main.cpp
+	"semua_header.h"
+
+1543762294 source:f:\tubesstd_struktur_tak_terdata\menu.cpp
+	"semua_header.h"
+
+1543761390 source:f:\tubesstd_struktur_tak_terdata\penampung.cpp
+	"semua_header.h"
+
+1543514342 source:f:\tubesstd_struktur_tak_terdata\welcome.cpp
+	"semua_header.h"
+
+1543765650 source:f:\tubesstd_struktur_tak_terdata\relasi.cpp
+	"semua_header.h"
+
