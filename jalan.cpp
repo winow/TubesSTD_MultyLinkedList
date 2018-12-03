@@ -53,18 +53,4 @@ void deleteFirstJalan(ListJalan &LJ, addressJalan Q){
         next(Q)=NULL;
     }
 }
-void deleteLastJalan(ListJalan &LJ, addressJalan Q){
-    addressJalan S;
-    if(first(LJ)!=NULL){
-        S = first(LJ);
-        if(next(S) != NULL){
-            deleteFirstJalan(LJ,Q);
-        }
-            while(next(next(S)) != NULL){
-                S = next(S);
-            }
-            Q = next(S);
-            next(S) = NULL;
-            next(Q) = NULL;
-    }
-}
+

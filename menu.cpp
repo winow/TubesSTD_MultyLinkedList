@@ -2,7 +2,7 @@
 
 void menu(ListJalan &LJ, ListKota &LK, ListRelasi &LR){
 
-    int pilihan, memilih,id_kota;
+    int pilihan, memilih,id_kota, jumlahRelasi;
     string nama_kota, nama_jalan, tipe_jalan,lagi;
     addressKota P,cekkota;
     addressJalan Q,cekjalan;
@@ -110,7 +110,7 @@ void menu(ListJalan &LJ, ListKota &LK, ListRelasi &LR){
             system("CLS");
             MenuRelasi:
             system("CLS");
-            cout<<"---------------------- M  ENU PENAMBAHAN RELASI DATA ----------------------"<<endl;
+            cout<<"---------------------- MENU PENAMBAHAN RELASI DATA ----------------------"<<endl;
             cout<<"'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''"<<endl;
             cout<<" Ket. Masukkan Nama Kota dan Nama Jalan yang ingin direlasikan."<<endl;
             cout<<" Nama Kota   :";cin.ignore();getline(cin,nama_kota);
@@ -124,15 +124,15 @@ void menu(ListJalan &LJ, ListKota &LK, ListRelasi &LR){
                 if(Q!=NULL){
                     R = alokasiRelasi(P, Q);
                     insertLastRelasi(LR,R);
-                    cout<<" Penambahan Relasi Data Berhasil!"<<endl;
-                    cout<<"--------------- DATA RELASI ---------------"<<endl;
-                    showRelasi(LR);
-                    cout<<" RelasiData lagi? [Ya/Tidak](Tidak untuk kembali kemenu sebelumnya)    :";cin>>lagi;
-                    if((lagi=="Ya")||(lagi=="yA")||(lagi=="YA")||(lagi=="ya")||(lagi=="y")){
-                        goto MenuRelasi;
-                    }else{
-                        goto Menu;
-                    }
+                }
+                cout<<" Penambahan Relasi Data Berhasil!"<<endl;
+                cout<<"--------------- DATA RELASI ---------------"<<endl;
+                showRelasi(LR);
+                cout<<" RelasiData lagi? [Ya/Tidak](Tidak untuk kembali kemenu sebelumnya)    :";cin>>lagi;
+                if((lagi=="Ya")||(lagi=="yA")||(lagi=="YA")||(lagi=="ya")||(lagi=="y")){
+                    goto MenuRelasi;
+                }else{
+                    goto Menu;
                 }
             }else {
                 cout << "Inputkan Nama Kota yang benar? [Ya/Tidak] (Tidak untuk kembali)   :";cin>>lagi;
@@ -223,7 +223,7 @@ void menu(ListJalan &LJ, ListKota &LK, ListRelasi &LR){
             system("CLS");
             cout<<"----------- MENU HAPUS DATA JALAN -----------"<<endl;
             cout<<"'''''''''''''''''''''''''''''''''''''''''''''"<<endl;
-            deleteLastJalan(LJ, Q);
+            deleteFirstJalan(LJ, Q);
             cout<<" Penghapusan Data Berhasil!"<<endl;
             cout<<" Tekan Enter untuk kembali ";
             getch();

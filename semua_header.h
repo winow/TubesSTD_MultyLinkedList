@@ -10,6 +10,8 @@
 #include <stdlib.h>
 #include <windows.h>
 
+
+
 #define first(L) (L).first
 #define last(L)  (L).last
 #define next(P)  (P)->next
@@ -98,12 +100,12 @@ addressJalan searchJalanNama(ListJalan LJ, string nama_jalan);
 addressJalan searchJalanTipe(ListJalan LJ, string tipe_jalan);
 void insertfirstJalan(ListJalan &LJ,addressJalan Q);
 void showJalan(ListJalan LJ);
-void deleteLastJalan(ListJalan &LJ, addressJalan Q);
+void deleteFirstJalan(ListJalan &LJ, addressJalan Q);
 
 //Procedure Relasi
 void createListRelasi(ListRelasi &LR);
 addressRelasi alokasiRelasi(addressKota refKota, addressJalan refJalan);
-addressRelasi searchRelasi(ListRelasi LR, addressKota P, addressJalan Q);
+addressRelasi searchRelasi(ListRelasi LR, addressKota refKota, addressJalan refJalan);
 void insertLastRelasi(ListRelasi &LR, addressRelasi R);
 void showRelasi(ListRelasi LR);
 

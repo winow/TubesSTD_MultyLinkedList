@@ -35,12 +35,16 @@ addressRelasi searchRelasi(ListRelasi LR, addressKota refKota, addressJalan refJ
 
 }
 
+
+
 void showRelasi(ListRelasi LR){
     if(first(LR)==NULL){
         cout << "Data Kosong" << endl;
     }else{
         addressRelasi R=first(LR);
         while(R != NULL){
+            int i = 1;
+            cout <<"--------------- Data Relasi ke-"<<i<<"-------------------"<<endl;
             cout <<"------------------------------------------------------"<<endl;
             cout <<" Nama Kota  :"<<infoKota(refKota(R)).nama_kota <<endl;
             cout <<" ID Kota    :"<<infoKota(refKota(R)).id_kota <<endl;
@@ -48,6 +52,7 @@ void showRelasi(ListRelasi LR){
             cout <<" Tipe Jalan :"<< infoJalan(refJalan(R)).tipe_jalan <<endl;
             cout <<"------------------------------------------------------"<<endl;
             R=nextR(R);
+            i=i+1;
         }
     }
 
