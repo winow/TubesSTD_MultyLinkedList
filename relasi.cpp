@@ -12,11 +12,21 @@ addressRelasi alokasiRelasi(addressKota refKota, addressJalan refJalan){
     prev(R) = NULL;
     return R;
 }
-
+void insertFirstRelasi(ListRelasi &LR, addressRelasi R){
+    if (first(LR)==NULL){
+        first(LR)=R;
+        last(LR)=R;
+    }else{
+        nextR(R)=last(LR);
+        prev(first(LR))=R;
+        first(LR)=R;
+    }
+}
 void insertLastRelasi(ListRelasi &LR, addressRelasi R){
     if(first(LR)==NULL){
-        first(LR)=R;
-    }else{
+        insertFirstRelasi(LR,R);
+    }
+    else{
         prev(R)=last(LR);
         nextR(last(LR))=R;
         last(LR)=R;

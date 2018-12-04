@@ -106,6 +106,7 @@ void deleteFirstJalan(ListJalan &LJ, addressJalan Q);
 void createListRelasi(ListRelasi &LR);
 addressRelasi alokasiRelasi(addressKota refKota, addressJalan refJalan);
 addressRelasi searchRelasi(ListRelasi LR, addressKota refKota, addressJalan refJalan);
+void insertFirstRelasi(ListRelasi &LR, addressRelasi R);
 void insertLastRelasi(ListRelasi &LR, addressRelasi R);
 void showRelasi(ListRelasi LR);
 

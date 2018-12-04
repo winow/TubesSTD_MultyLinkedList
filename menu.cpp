@@ -6,7 +6,7 @@ void menu(ListJalan &LJ, ListKota &LK, ListRelasi &LR){
     string nama_kota, nama_jalan, tipe_jalan,lagi;
     addressKota P,cekkota;
     addressJalan Q,cekjalan;
-    addressRelasi R;
+    addressRelasi R, cekrelasi;
 
     Beranda:
     system("CLS");
@@ -109,41 +109,46 @@ void menu(ListJalan &LJ, ListKota &LK, ListRelasi &LR){
         case 3:
             system("CLS");
             MenuRelasi:
-            system("CLS");
-            cout<<"---------------------- MENU PENAMBAHAN RELASI DATA ----------------------"<<endl;
-            cout<<"'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''"<<endl;
-            cout<<" Ket. Masukkan Nama Kota dan Nama Jalan yang ingin direlasikan."<<endl;
-            cout<<" Nama Kota   :";cin.ignore();getline(cin,nama_kota);
-            cekkota = searchKota(LK,nama_kota);
-            P = cekkota;
-            if(P!=NULL){
-                cout<<" Nama Jalan  :";
-                getline(cin,nama_jalan);cin.ignore();
-                cekjalan = searchJalanNama(LJ,nama_jalan);
-                Q = cekjalan;
-                if(Q!=NULL){
-                    R = alokasiRelasi(P, Q);
-                    insertLastRelasi(LR,R);
-                }
-                cout<<" Penambahan Relasi Data Berhasil!"<<endl;
-                cout<<"--------------- DATA RELASI ---------------"<<endl;
-                showRelasi(LR);
-                cout<<" RelasiData lagi? [Ya/Tidak](Tidak untuk kembali kemenu sebelumnya)    :";cin>>lagi;
-                if((lagi=="Ya")||(lagi=="yA")||(lagi=="YA")||(lagi=="ya")||(lagi=="y")){
-                    goto MenuRelasi;
-                }else{
-                    goto Menu;
-                }
-            }else {
-                cout << "Inputkan Nama Kota yang benar? [Ya/Tidak] (Tidak untuk kembali)   :";cin>>lagi;
+                system("CLS");
+                cout<<"---------------------- MENU PENAMBAHAN RELASI DATA ----------------------"<<endl;
+                cout<<"'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''"<<endl;
+                cout<<" Ket. Masukkan Nama Kota dan Nama Jalan yang ingin direlasikan."<<endl;
+                cout<<" Nama Kota   :";cin.ignore();getline(cin,nama_kota);
+                cekkota = searchKota(LK,nama_kota);
+                P = cekkota;
+                if(P!=NULL){
+                    cout<<" Nama Jalan  :";
+                    getline(cin,nama_jalan);cin.ignore();
+                    cekjalan = searchJalanNama(LJ,nama_jalan);
+                    Q = cekjalan;
+                    if(Q!=NULL){
+                        cekrelasi = searchRelasi(LR,P,Q);
+                        if(cekrelasi!=NULL){
+                            insertLastRelasi(LR,R);
+                        }
+                        else
+                            R = alokasiRelasi(P, Q);
+                        insertLastRelasi(LR,R);
+                    }
+                    cout<<" Penambahan Relasi Data Berhasil!"<<endl;
+                    cout<<"--------------- DATA RELASI ---------------"<<endl;
+                    showRelasi(LR);
+                    cout<<" RelasiData lagi? [Ya/Tidak](Tidak untuk kembali kemenu sebelumnya)    :";cin>>lagi;
                     if((lagi=="Ya")||(lagi=="yA")||(lagi=="YA")||(lagi=="ya")||(lagi=="y")){
                         goto MenuRelasi;
                     }else{
                         goto Menu;
                     }
-            }
+                }else {
+                    cout << "Inputkan Nama Kota yang benar? [Ya/Tidak] (Tidak untuk kembali)   :";cin>>lagi;
+                    if((lagi=="Ya")||(lagi=="yA")||(lagi=="YA")||(lagi=="ya")||(lagi=="y")){
+                        goto MenuRelasi;
+                    }else{
+                        goto Menu;
+                    }
+                }
 
-        case 4:
+            case 4:
             system("CLS");
             goto Beranda;
     }
